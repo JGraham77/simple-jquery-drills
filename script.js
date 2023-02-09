@@ -14,3 +14,7 @@ $txtSubmit.keyup(() => {
         $btnSubmit.attr('disabled', false);
     }
 });
+
+// Create div and append to body
+const $div = $(`<div class='container'></div>`);
+$div.appendTo('body');
