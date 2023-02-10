@@ -8,6 +8,7 @@ $btnSubmit.click(function () {
     alert($txtSubmit.val());
 });
 
+// Enables $btnSubmit when there is any text in $txtSubmit
 $txtSubmit.keyup(() => {
     if ($txtSubmit.val() !== '') {
         // Allows the button to be used
@@ -18,3 +19,8 @@ $txtSubmit.keyup(() => {
 // Create div and append to body
 const $div = $(`<div class='container'></div>`);
 $div.appendTo('body');
+
+$btnSubmit.click(() => {
+    $div.append(`<h2>${$txtSubmit.val()}</h2>`);
+    $txtSubmit.val('');
+})
